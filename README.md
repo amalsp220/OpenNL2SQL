@@ -358,6 +358,73 @@ MIT License - see [LICENSE](LICENSE) file
 - [FastAPI](https://fastapi.tiangolo.com) for the excellent web framework
 - [Streamlit](https://streamlit.io) for rapid UI development
 - Open-source community
+- 
+## 🚀 Live Deployment
+
+**Frontend (Streamlit):** [https://opennl2sql-tccpqxu3vocvgpn8zphunh.streamlit.app/](https://opennl2sql-tccpqxu3vocvgpn8zphunh.streamlit.app/)
+
+The application is deployed on Streamlit Cloud and is ready to use! The frontend provides a clean, professional interface for:
+- Converting natural language questions to SQL queries
+- Viewing query history
+- Configuring backend settings
+
+### Deployment Architecture
+
+```
+┌─────────────────────────────────────────┐
+│  Streamlit Cloud (Frontend)             │
+│  https://opennl2sql-...streamlit.app/   │
+│  - User Interface                       │
+│  - Query Input                          │
+│  - Results Display                      │
+└────────────────┬────────────────────────┘
+                 │
+                 │ HTTP API Calls
+                 ▼
+┌─────────────────────────────────────────┐
+│  Backend API (Optional)                 │
+│  Deploy to: Render / Railway / Local   │
+│  - FastAPI Server                       │
+│  - Groq AI Integration                  │
+│  - SQLite Database                      │
+└─────────────────────────────────────────┘
+```
+
+### Deploy Your Own Instance
+
+#### Option 1: Frontend Only (Streamlit Cloud)
+
+1. Fork this repository
+2. Go to [share.streamlit.io](https://share.streamlit.io/)
+3. Deploy from your forked repo:
+   - Repository: `your-username/OpenNL2SQL`
+   - Branch: `main`
+   - Main file path: `frontend/streamlit_app.py`
+4. Add secrets in Streamlit Cloud dashboard:
+   ```toml
+   GROQ_API_KEY = "your_groq_api_key_here"
+   ```
+
+#### Option 2: Full Stack Deployment
+
+**Backend (Render/Railway):**
+
+1. Create account on [Render](https://render.com/) or [Railway](https://railway.app/)
+2. Create new Web Service
+3. Connect your GitHub repository
+4. Configure:
+   - Build Command: `pip install -r requirements.txt`
+   - Start Command: `cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+5. Add environment variable:
+   - `GROQ_API_KEY`: Your Groq API key
+6. Deploy!
+
+**Frontend (Streamlit Cloud):**
+
+1. Follow Option 1 steps above
+2. In Settings tab of deployed app, update Backend API URL to your deployed backend URL
+
+
 
 ## 🔮 Future Enhancements
 
