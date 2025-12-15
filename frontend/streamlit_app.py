@@ -42,7 +42,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Backend API URL
-BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
+BACKEND_URL = os.getenv("BACKEND_URL", "https://amalsp-opennl2sql-api.hf.space")
 
 # Session state
 if 'session_id' not in st.session_state:
