@@ -363,8 +363,10 @@ MIT License - see [LICENSE](LICENSE) file
 
 **Frontend (Streamlit):** [https://opennl2sql-tccpqxu3vocvgpn8zphunh.streamlit.app/](https://opennl2sql-tccpqxu3vocvgpn8zphunh.streamlit.app/)
 
-The application is deployed on Streamlit Cloud and is ready to use! The frontend provides a clean, professional interface for:
-- Converting natural language questions to SQL queries
+**Backend (Hugging Face Spaces):** [https://amalsp-opennl2sql-api.hf.space](https://amalsp-opennl2sql-api.hf.space)  
+**API Documentation:** [https://amalsp-opennl2sql-api.hf.space/docs](https://amalsp-opennl2sql-api.hf.space/docs)
+
+The full-stack application is now deployed and fully operational! Frontend on Streamlit Cloud, Backend on Hugging Face Spaces (free tier). The integration provides a complete, production-ready NL2SQL system:- Converting natural language questions to SQL queries
 - Viewing query history
 - Configuring backend settings
 
@@ -382,9 +384,7 @@ The application is deployed on Streamlit Cloud and is ready to use! The frontend
                  │ HTTP API Calls
                  ▼
 ┌─────────────────────────────────────────┐
-│  Backend API (Optional)                 │
-│  Deploy to: Render / Railway / Local   │
-│  - FastAPI Server                       │
+|  Hugging Face Spaces (Backend)             ||  https://amalsp-opennl2sql-api.hf.space   |│  - FastAPI Server                       │
 │  - Groq AI Integration                  │
 │  - SQLite Database                      │
 └─────────────────────────────────────────┘
