@@ -19,8 +19,6 @@ pydantic-settings==2.1.0
 # Environment Variables
 python-dotenv==1.0.0
 
-# Security
-python-jose[cryptography]==3.3.0
 
 # Utilities (simplified)
 typing-extensions>=4.0.0
